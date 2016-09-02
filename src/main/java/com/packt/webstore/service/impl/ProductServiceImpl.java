@@ -40,4 +40,10 @@ public class ProductServiceImpl implements ProductService{
 		return productRepository.getProductsByFilter(filterParams);
 	}
 
+	@Override
+	public void addProduct(Product product) {
+		// TODO Auto-generated method stub
+		productRepository.addProduct(product);
+	}
+
 }
