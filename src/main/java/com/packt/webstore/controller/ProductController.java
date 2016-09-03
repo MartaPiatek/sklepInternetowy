@@ -96,6 +96,9 @@ public class ProductController {
 			
 			
 		}
+		
+
+		
 		productService.addProduct(newProduct);
 		return "redirect:/products";
 	}

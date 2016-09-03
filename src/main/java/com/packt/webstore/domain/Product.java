@@ -2,8 +2,12 @@ package com.packt.webstore.domain;
 
 import java.math.BigDecimal;
 
+import javax.xml.bind.annotation.XmlTransient;
+
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.springframework.web.multipart.MultipartFile;
 
+@XmlTransient
 public class Product {
 
 	private String productId;
@@ -16,8 +20,9 @@ public class Product {
 	private long unitsInOrder;
 	private boolean discontinued;
 	private String condition;
+	@JsonIgnore
 	private MultipartFile productImage;
-	
+
 	
 	// konstruktory
 	
@@ -122,6 +127,10 @@ public class Product {
 	public void setProductImage(MultipartFile productImage) {
 		this.productImage = productImage;
 	}
+
+	
+	
+
 
 	@Override
 	public boolean equals(Object obj) {
