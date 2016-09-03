@@ -32,7 +32,7 @@
 					<a href=" <spring:url value="/products/product?id=${product.productId}" /> 
 					" class="btn btn-primary">
 					
-						<span class="glyphicon-info-sign glyphicon" /> </span> Szczegóły
+						<span class="glyphicon-info-sign glyphicon" /> Szczegóły
 					</a>
 				</p>
 							
