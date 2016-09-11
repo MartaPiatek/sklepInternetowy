@@ -1,78 +1,87 @@
 package com.packt.webstore.domain;
 
-public class Customer {
+import java.io.Serializable;
 
-	private String  customerId;
-	private String name;
-	private String address;
-	private long noOfOrdersMade;
+public class Customer implements Serializable{
+
+	private static final long serialVersionUID = 2284040482222162898L;
 	
+	private String customerId;
+	private String name;
+	private Address billingAddress;
+	private String phoneNumber;
 	
 	public Customer() {
-		super();
-		// TODO Auto-generated constructor stub
+		this.billingAddress = new Address();
 	}
-
-
-
-	public Customer(String customerId, String name, String address) {
-		super();
+	
+	public Customer(String customerId, String name) {
+		this();
 		this.customerId = customerId;
 		this.name = name;
-		this.address = address;
 	}
-
-
 
 	public String getCustomerId() {
 		return customerId;
 	}
 
-
-
 	public void setCustomerId(String customerId) {
 		this.customerId = customerId;
 	}
-
-
 
 	public String getName() {
 		return name;
 	}
 
-
-
 	public void setName(String name) {
 		this.name = name;
 	}
 
-
-
-	public String getAddress() {
-		return address;
+	public Address getBillingAddress() {
+		return billingAddress;
 	}
 
-
-
-	public void setAddress(String address) {
-		this.address = address;
+	public void setBillingAddress(Address billingAddress) {
+		this.billingAddress = billingAddress;
 	}
 
-
-
-	public long getNoOfOrdersMade() {
-		return noOfOrdersMade;
+	public String getPhoneNumber() {
+		return phoneNumber;
 	}
 
-
-
-	public void setNoOfOrdersMade(long noOfOrdersMade) {
-		this.noOfOrdersMade = noOfOrdersMade;
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
-	
-	
-	
-	
-	
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 853;
+		int result = 1;
+		result = prime * result
+				+ ((customerId == null) ? 0 : customerId.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Customer other = (Customer) obj;
+		if (customerId == null) {
+			if (other.customerId != null)
+				return false;
+		} else if (!customerId.equals(other.customerId))
+			return false;
+		return true;
+	}
+
 	
 }

@@ -1,5 +1,6 @@
 package com.packt.webstore.domain;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 import javax.validation.constraints.Digits;
@@ -17,8 +18,12 @@ import com.packt.webstore.validator.ProductId;
 
 
 @XmlTransient
-public class Product {
+public class Product implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Pattern(regexp="P[0-9]+",message="{Pattern.Product.productId.validation}")
 	@ProductId
 	private String productId;

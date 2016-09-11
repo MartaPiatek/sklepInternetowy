@@ -20,15 +20,15 @@ public class InMemoryCustomerRepository implements CustomerRepository{
 	
 	public InMemoryCustomerRepository() {
 		
-		Customer c1=new Customer("C1", "Adam Nowak", "Wroc³aw");
-		c1.setNoOfOrdersMade(1);
+		Customer c1=new Customer("C1", "Adam Nowak");
+		
 				
-		Customer c2=new Customer("C2", "Jan Kowalski", "Warszawa");
-		c2.setNoOfOrdersMade(3);
+		Customer c2=new Customer("C2", "Jan Kowalski");
 		
 		
-		Customer c3=new Customer("C3", "Edward No¿ycorêki", "Bydgoszcz");
-		c3.setNoOfOrdersMade(2);
+		
+		Customer c3=new Customer("C3", "Edward No¿ycorêki");
+		
 		
 		
 		listOfCustomers.add(c1);

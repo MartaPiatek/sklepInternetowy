@@ -1,9 +1,14 @@
 package com.packt.webstore.domain;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class CartItem {
+public class CartItem implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Product product;
 	private int quantity;
 	private BigDecimal totalPrice;
@@ -45,6 +50,18 @@ public class CartItem {
 		totalPrice = this.product.getUnitPrice().multiply(new BigDecimal(this.quantity));
 	}
 	
+	
+	
+	
+	
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public void setTotalPrice(BigDecimal totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 311;
