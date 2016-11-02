@@ -1,0 +1,2 @@
+# sklepInternetowy
+Aplikacja webowa
