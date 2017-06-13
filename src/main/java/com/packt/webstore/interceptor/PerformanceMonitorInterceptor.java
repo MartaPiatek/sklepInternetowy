@@ -26,8 +26,8 @@ public class PerformanceMonitorInterceptor implements HandlerInterceptor{
 		StopWatch stopWatch=new StopWatch(handler.toString());
 		stopWatch.start(handler.toString());
 		stopWatchLocal.set(stopWatch);
-		logger.info("Przetwarzanie ¿¹dania do œcie¿ki: " +geteURLPath(request));
-		logger.info("Przetwarzanie rozpoczêto o: "+getCurrentTime());
+		logger.info("Przetwarzanie zadania do sciezki: " +geteURLPath(request));
+		logger.info("Przetwarzanie rozpoczeto o: "+getCurrentTime());
 		
 		return true;
 	}

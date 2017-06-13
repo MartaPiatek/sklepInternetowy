@@ -92,10 +92,10 @@ public class CartRestController {
 	}
 
 	@ExceptionHandler(IllegalArgumentException.class)
-	@ResponseStatus(value = HttpStatus.BAD_REQUEST,  reason="Niepoprawne ¿¹danie, sprawdŸ przesy³ane dane.")
+	@ResponseStatus(value = HttpStatus.BAD_REQUEST,  reason="Niepoprawne zadanie, sprawdz przesylane dane.")
 	public void handleClientErrors(Exception ex) { }
 
 	@ExceptionHandler(Exception.class)
-	@ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR, reason="Wewnêtrzny b³¹d serwera")
+	@ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR, reason="Wewnetrzny blad serwera")
 	public void handleServerErrors(Exception ex) {	}
 }

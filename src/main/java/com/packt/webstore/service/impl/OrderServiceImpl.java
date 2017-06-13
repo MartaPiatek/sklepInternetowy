@@ -30,7 +30,7 @@ public class OrderServiceImpl implements OrderService{
 		
 		if(productById.getUnitsInStock()<count){
 			
-			throw new IllegalArgumentException("Za ma³o towaru. Obecna liczba sztuk w magazynie to: "+productById.getUnitsInStock());
+			throw new IllegalArgumentException("Za malo towaru. Obecna liczba sztuk w magazynie to: "+productById.getUnitsInStock());
 			
 		}
 		

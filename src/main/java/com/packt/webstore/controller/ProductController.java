@@ -96,7 +96,7 @@ public class ProductController {
 		String[] suppressedFields = result.getSuppressedFields();
 		
 		if (suppressedFields.length > 0) {
-			throw new RuntimeException("Próba wi¹zania niedozwolonych pól: " + StringUtils.arrayToCommaDelimitedString(suppressedFields));
+			throw new RuntimeException("Proba wiazania niedozwolonych pol: " + StringUtils.arrayToCommaDelimitedString(suppressedFields));
 		}
 		
 		MultipartFile productImage = productToBeAdded.getProductImage();
@@ -106,7 +106,7 @@ public class ProductController {
 		       try {
 		      	productImage.transferTo(new File(rootDirectory+"resources\\images\\"+productToBeAdded.getProductId() + ".png"));
 		       } catch (Exception e) {
-				throw new RuntimeException("Próba zapisu obrazka zakoñczona niepowodzeniem", e);
+				throw new RuntimeException("Proba zapisu obrazka zakonczona niepowodzeniem", e);
 		   }
 		   }
 

@@ -27,7 +27,7 @@ public class InMemoryCustomerRepository implements CustomerRepository{
 		
 		
 		
-		Customer c3=new Customer("C3", "Edward No¿ycorêki");
+		Customer c3=new Customer("C3", "Edward Nozycoreki");
 		
 		
 		
