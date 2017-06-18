@@ -43,7 +43,7 @@ public class InMemoryCartRepository implements CartRepository{
 	
 	public void delete(String cartId) {
 		if(!listOfCarts.keySet().contains(cartId)) {
-			throw new IllegalArgumentException(String.format("Nie mo¿na usun¹æ koszyka. Koszyk o wskazanym id (%) nie istnieje.",cartId));
+			throw new IllegalArgumentException(String.format("Nie mozna usunac koszyka. Koszyk o wskazanym id (%) nie istnieje.",cartId));
 		}
 
 		listOfCarts.remove(cartId);
